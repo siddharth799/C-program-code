@@ -1,0 +1,60 @@
+#include<iostream>
+#include<string.h>
+using namespace std;
+class student{
+    private:
+        int age;
+        char name[20];
+        float marks;
+    public:
+        void printdetail();
+        void input();
+};
+
+void student::printdetail(){
+    cout<<"age = "<<age<<" ,name = "<<name<<" ,marks = "<<marks<<endl;
+}
+void student::input(){
+    cin>>age;
+    cin.ignore();
+    cin.getline(name,20);
+    cin>>marks;
+}
+int main(){
+    student s,s1,s2;
+    s.input();
+    s.printdetail();
+    s1.input();
+    s1.printdetail();
+    s2.input();
+    s2.printdetail();
+}
+------------------------------------------------------------------------------------------------------------------------------
+#include<iostream>
+#include<string.h>
+using namespace std;
+class product{
+private:
+    int x,y;
+    static int s;
+public:
+    void printvalue(){
+        cout<<"x = "<<x<<" ,y = "<<y<<endl;    
+    }
+    void setvalue(int a,int b){
+        x=a;
+        y=b;
+    }
+    product(){       //constructor hai
+        x=0;
+        y=0;
+    }
+};
+
+int main(){
+    product s;       //constructor ka value yaha print hoga kyuki initilization 0,0 se kiye hai then vale diye hai 
+    s.printvalue();
+    s.setvalue(10,20);
+    s.printvalue();
+}
+
