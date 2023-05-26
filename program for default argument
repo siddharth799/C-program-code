@@ -1,0 +1,12 @@
+#include<iostream>
+using namespace std;
+int ADD(int=0,int=0,int=0);
+int main(){
+    cout<<ADD()<<endl;
+    cout<<ADD(10)<<endl;
+    cout<<ADD(10,20)<<endl;
+    cout<<ADD(10,20,50)<<endl;
+}
+int ADD(int a,int b,int c){
+    return a+b+c;
+}
