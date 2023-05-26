@@ -1,0 +1,17 @@
+#include<iostream>
+using namespace std;
+int FINDMAX(int x,int y){return x>y?x:y;}
+int FINDMAX(int x,int y,int z){
+    int max=x;
+    if(y>max)
+        max=y;
+    if(z>max)
+        max=z;
+    return max;
+}
+int main(){
+    int x=10,y=20,z=30;
+    cout<<FINDMAX(x,y)<<endl;
+    cout<<FINDMAX(x,y,z)<<endl;
+    
+}
