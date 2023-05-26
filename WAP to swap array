@@ -1,0 +1,24 @@
+#include<iostream>
+using namespace std;
+int temp;
+void reverse(int a[],int size){
+    if(size==0||size==1)
+        return;
+    temp=a[0];
+    a[0]=a[size-1];
+    a[size-1]=temp;
+    reverse(a+1,size-2);
+};
+int main(){
+    int a[]={1,2,3,4,5,6};
+    
+    cout<<"before reverse:"<<endl;
+    for(int i=0;i<6;i++)
+        cout<<a[i]<<" ";
+    printf("\n");
+    reverse(a,6);
+    cout<<"after reverse:"<<endl;
+    for(int i=0;i<6;i++)
+        cout<<a[i]<<" ";
+return 0;
+}
