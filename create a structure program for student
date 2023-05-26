@@ -1,0 +1,46 @@
+#include<iostream>
+#include<string.h>
+using namespace std;
+struct student{
+    int age;
+    char name[20];
+    float marks;
+};
+int main(){
+    struct student s={30,"mikki",70.4},s1,s3;
+    s1.age=24;
+    strcpy(s1.name,"manu");
+    s1.marks=98.7;
+    cout<<s.age<<" "<<" "<<s.name<<" "<<s.marks <<endl;
+    cout<<"enter age name and marks"<<endl;
+    cin>>s3.age;
+    cin.ignore();// string or character ko agr store karna hota to buffer ko flush krte hai with the help of ignore() function
+    cin.getline(s3.name,20);
+    cin>>s3.marks;
+    cout<<s3.age<<" "<<s3.name<<" "<<s3.marks<<" ";
+}
+-----------------------------------------------------------------------------------------------------------------------------------
+#include<iostream>
+#include<string.h>
+using namespace std;
+struct student{
+    int age;
+    char name[20];
+    float marks;
+};
+void printdetail(struct student x){
+    cout<<"age= "<<x.age<<"name= "<<x.name<<"marks = "<<x.marks;
+}
+int main(){
+    struct student s={30,"mikki",70.4},s1,s3;
+    s1.age=24;
+    strcpy(s1.name,"manu");
+    s1.marks=98.7;
+    cout<<"enter age name and marks"<<endl;
+    cin>>s3.age;
+    cin.ignore();// string or character ko agr store karna hota to buffer ko flush krte hai with the help of ignore() function
+    cin.getline(s3.name,20);
+    cin>>s3.marks;
+    printdetail(s);
+    printdetail(s3);
+}
