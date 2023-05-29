@@ -1,0 +1,17 @@
+#include<iostream>
+#include<string.h>
+using namespace std;
+void sub(int index,string input,string output){
+    int l=input.size();
+    if(index==l){
+        cout<<output<<endl;
+        return ;
+    }
+sub(index+1,input,output+input[index]);
+sub(index+1,input,output);
+}
+int main(){
+    string s;
+    cin>>s;
+    sub(0,s," ");
+}
