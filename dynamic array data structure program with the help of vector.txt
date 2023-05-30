@@ -1,0 +1,37 @@
+#include<iostream>
+using namespace std;
+#include<vector>
+int main(){
+    vector<int>v={1,2,3,4};
+    vector<int>::iterator it;
+    for(it=v.begin();it!=v.end();it++){
+        cout<<*it<<" ";
+    }
+        cout<<endl;
+    v.push_back(100); //insert 100 at last end of vector
+    v.push_back(200); //insert 200 at last end of vector
+    for(it=v.begin();it!=v.end();it++){
+        cout<<*it<<" ";
+    }
+
+    cout<<endl;
+    v.pop_back(); // delete last integer from vector
+    for(it=v.begin();it!=v.end();it++){
+        cout<<*it<<" ";
+    }
+    cout<<endl;
+    v.insert(v.begin(),1000);    // insert 1000 in vector from begin
+     for(it=v.begin();it!=v.end();it++){
+        cout<<*it<<" ";
+         
+    }
+    cout<<endl;
+    
+    v.insert(v.begin()+2,500);  // 500 insert from begin to second  position 
+    for(it=v.begin();it!=v.end();it++){
+        cout<<*it<<" ";
+    }
+    
+    
+
+}
