@@ -1,0 +1,23 @@
+#include<iostream>
+#include<vector>
+using namespace std;
+void sub(string input,vector<string>&output){
+    if(input.size()==0){
+        output.push_back(" ");
+        return;
+    }
+    sub(input.substr(1),output);
+        int x=output.size();
+        for(int i=0;i<x;i++){
+            output.push_back(input[0]+output[i]);
+        }
+}
+int main(){
+    string input;
+    cin>>input;
+    vector<string>output;
+    sub(input,output);
+    for(int i=0;i<output.size();i++){
+        cout<<output[i]<<endl;
+    }
+}
